@@ -1,0 +1,22 @@
+servico,categoria,descricao,porte_aceito,preco_a_partir,duracao_min,agendamento_necessario,observacao
+Banho,Higiene,Banho com shampoo e secagem,Todos,60,60,Sim,Traga a carteira de vacinação em dia e avise se o pet tem alergia ou fica agitado.
+Banho e tosa,Higiene,Banho completo com tosa na máquina ou na tesoura,Todos,120,120,Sim,Diga ao agendar o tipo de tosa desejado (máquina ou tesoura). As vacinas precisam estar em dia.
+Banho para gatos,Higiene,Banho especial para gatos com secagem cuidadosa,Todos,70,60,Sim,Traga o gato na caixa de transporte. Os gatos são atendidos em horário separado dos cães.
+Tosa higiênica,Higiene,Tosa das patas barriga e região íntima,Todos,70,60,Sim,"Pode ser feita junto com o banho, no mesmo horário."
+Tosa para gatos,Higiene,Tosa higiênica adaptada para gatos,Todos,80,60,Sim,Traga o gato na caixa de transporte. Gatos muito agitados podem precisar de avaliação veterinária antes.
+Hidratação de pelos,Higiene,Tratamento hidratante para pelos longos e ressecados,Médio,90,60,Sim,Indicada a cada 15 a 30 dias para pelos longos. Pode ser feita junto com o banho.
+Corte de unhas,Higiene,Corte e lixamento das unhas,Todos,25,15,Não,Atendimento por ordem de chegada.
+Escovação de dentes,Higiene,Limpeza dental com escova e pasta específica,Todos,35,20,Não,"Em caso de tártaro, mau hálito forte ou gengiva sangrando, marque uma consulta veterinária."
+Consulta veterinária,Saúde,Consulta clínica geral com veterinário parceiro,Todos,150,40,Sim,"Traga a carteira de vacinação e exames anteriores. Em emergências, procure um pronto-socorro veterinário 24 horas."
+Vacinação,Saúde,Aplicação de vacinas conforme o calendário,Todos,120,20,Sim,Traga a carteira de vacinação. O pet precisa estar saudável no dia; filhotes seguem o calendário indicado pelo veterinário.
+Vermifugação,Saúde,Aplicação de vermífugo com orientação de dose,Todos,40,10,Não,"A dose depende do peso, por isso o pet é pesado na hora."
+Antipulgas,Saúde,Aplicação de antipulgas com orientação,Todos,45,15,Não,A dose depende do peso do pet. Repita no prazo indicado pelo produto.
+Exame de sangue,Saúde,Coleta e envio para laboratório parceiro,Todos,130,20,Sim,O pet precisa de jejum de 8 horas de comida (água liberada). O resultado sai em até 2 dias úteis.
+Hospedagem diária,Hospedagem,Hospedagem com área de descanso e alimentação,Todos,80,1440,Sim,"Traga a ração do pet, a carteira de vacinação em dia e um objeto conhecido, como manta ou brinquedo."
+Hospedagem para cães grandes,Hospedagem,Espaço amplo para cães de porte grande,Grande,110,1440,Sim,"Traga a ração e a carteira de vacinação em dia. As vagas são limitadas, então reserve com antecedência."
+Passeio,Hospedagem,Passeio de 30 minutos com monitor,Todos,35,30,Não,O pet precisa estar com as vacinas em dia. O passeio é feito com coleira e guia.
+Adestramento básico,Adestramento,Sessão de comandos básicos como sentar e deitar,Todos,100,45,Sim,Os melhores resultados aparecem com sessões semanais e treino em casa.
+Adestramento de filhotes,Adestramento,Socialização e educação para filhotes,Pequeno,90,45,Sim,"Indicado a partir de 3 meses de idade, depois das primeiras vacinas."
+Transporte pet,Transporte,Busca e entrega do pet na casa do cliente,Todos,30,40,Sim,Atende bairros próximos à loja. Cães pequenos e gatos viajam na caixa de transporte.
+Ração premium,Alimentação,Ração premium para cães e gatos vendida por pacote,Todos,120,0,Não,"Temos opções para filhotes, adultos e idosos. Consulte as marcas disponíveis na loja."
+Petisco natural,Alimentação,Petiscos naturais sem conservantes,Todos,15,0,Não,"Ofereça com moderação, sem substituir a refeição do pet."
