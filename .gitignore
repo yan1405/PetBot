@@ -1,0 +1,7 @@
+# arquivos gerados pelo Python
+__pycache__/
+.ipynb_checkpoints/
+
+# segredos: a chave da API nunca deve ir para o GitHub
+.env
+.streamlit/secrets.toml
