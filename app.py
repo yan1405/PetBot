@@ -6,7 +6,7 @@ import streamlit as st
 URL_LLM = "https://integrate.api.nvidia.com/v1/chat/completions"
 MODELO_LLM = "nvidia/nemotron-3.5-bolt-e4b"  # confirme o modelo disponível em build.nvidia.com
 
-st.set_page_config(page_title="PetBot", layout="wide")
+st.set_page_config(page_title="PetBot | Romeu Studio", layout="wide")
 
 @st.cache_data
 def carregar_dados():
@@ -25,16 +25,19 @@ intencoes = {
 }
 
 # informações da loja (fictícias), as perguntas mais comuns do dia a dia
+NOME_LOJA = "Romeu Studio"
 WHATSAPP = "(11) 90000-0000"
 
 informacoes_loja = {
+    "nome": "Somos o " + NOME_LOJA + ", pet shop com serviços de higiene, saúde, hospedagem, adestramento, transporte e alimentação para cães e gatos.",
     "horario": "Funcionamos de segunda a sexta, das 8h às 19h, e aos sábados, das 8h às 14h. Fechamos aos domingos e feriados.",
     "pagamento": "Aceitamos Pix, dinheiro e cartões de débito e crédito. Serviços acima de R$ 200,00 podem ser parcelados em até 3 vezes sem juros no crédito.",
-    "endereco": "Estamos na Rua das Flores, 123, Centro, com estacionamento gratuito para clientes. Se preferir, o serviço Transporte pet busca e entrega o seu pet em casa.",
+    "endereco": "O " + NOME_LOJA + " fica na Rua das Flores, 123, Centro, com estacionamento gratuito para clientes. Se preferir, o serviço Transporte pet busca e entrega o seu pet em casa.",
     "contato": "Fale com a equipe pelo WhatsApp " + WHATSAPP + " ou pelo telefone (11) 3000-0000, no horário de funcionamento."
 }
 
 palavras_loja = {
+    "nome": ["nome da loja", "nome do pet shop", "como se chama a loja"],
     "horario": ["horário", "horario", "que horas", "abre", "fecha", "funcionamento", "domingo", "sábado", "sabado", "feriado"],
     "pagamento": ["pagamento", "pagar", "pix", "cartão", "cartao", "dinheiro", "parcela", "crédito", "credito", "débito", "debito"],
     "endereco": ["endereço", "endereco", "onde fica", "localização", "localizacao", "estacionamento"],
@@ -100,7 +103,8 @@ def perguntar_llm(pergunta, dataframe):
         return "O assistente avançado não está configurado. Fale com a equipe pelo WhatsApp " + WHATSAPP + "."
     catalogo = dataframe.to_string(index=False)
     loja = "\n".join(informacoes_loja.values())
-    instrucao = ("Você é o atendente virtual de um pet shop. Responda em português, de forma clara e prática, "
+    instrucao = ("Você é o PetBot, atendente virtual do pet shop " + NOME_LOJA + ". "
+                 "Quando falar da loja, chame-a pelo nome " + NOME_LOJA + ". Responda em português, de forma clara e prática, "
                  "em até 4 frases, somente sobre o pet shop e os cuidados com pets. "
                  "Use apenas as informações abaixo e não invente preços, serviços ou horários. "
                  "Quando indicar um serviço, informe o preço inicial e se precisa de agendamento. "
@@ -141,7 +145,7 @@ def chatbot(pergunta, dataframe, usar_llm=True):
 
     saudacoes = ["oi", "olá", "ola", "bom dia", "boa tarde", "boa noite"]
     if any(s == texto or texto.startswith(s + " ") for s in saudacoes):
-        return ("Olá! Eu sou o PetBot, o atendente virtual do pet shop. Posso informar preço, duração, "
+        return ("Olá! Bem-vindo ao " + NOME_LOJA + ". Eu sou o PetBot, o atendente virtual. Posso informar preço, duração, "
                 "agendamento e cuidados de cada serviço, além do horário de funcionamento, das formas de "
                 "pagamento, do endereço e do contato. Como posso ajudar?")
 
@@ -200,8 +204,8 @@ def chatbot(pergunta, dataframe, usar_llm=True):
 
 df = carregar_dados()
 
-st.title("PetBot")
-st.caption("Atendimento inicial do pet shop | Python + Pandas + Streamlit + LLM (NVIDIA)")
+st.title("PetBot | " + NOME_LOJA)
+st.caption("Atendimento inicial do pet shop " + NOME_LOJA + " | Python + Pandas + Streamlit + LLM (NVIDIA)")
 
 with st.sidebar:
     st.header("Serviços")

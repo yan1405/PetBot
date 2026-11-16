@@ -1,6 +1,7 @@
-README: PetBot - Atendimento inicial do pet shop
+README: PetBot - Atendimento inicial do pet shop Romeu Studio
 
 Nome do chatbot: PetBot
+Nome do pet shop: Romeu Studio (fictício)
 Tema: Atendimento inicial de um pet shop (serviços, preços, duração, agendamento, porte aceito, cuidados e informações da loja)
 Integrantes: [preencher]
 
@@ -8,7 +9,7 @@ Objetivo do chatbot:
 Responder às perguntas frequentes dos clientes com regras e palavras-chave. Quando as regras não reconhecem a pergunta, o bot consulta um modelo de linguagem (LLM) pela API gratuita da NVIDIA.
 
 Descrição da base de dados:
-Arquivo dados.csv com 21 serviços fictícios e 8 atributos: servico, categoria, descricao, porte_aceito, preco_a_partir, duracao_min, agendamento_necessario e observacao (orientações práticas, como o que levar, jejum ou atendimento por ordem de chegada). As informações da loja (horário, pagamento, endereço e contato) ficam no dicionário informacoes_loja do código. Todos os dados são pedagógicos e não substituem as informações reais do pet shop.
+Arquivo dados.csv com 21 serviços fictícios e 8 atributos: servico, categoria, descricao, porte_aceito, preco_a_partir, duracao_min, agendamento_necessario e observacao (orientações práticas, como o que levar, jejum ou atendimento por ordem de chegada). As informações da loja (horário, pagamento, endereço e contato) ficam no dicionário informacoes_loja do código, e o nome do pet shop fica na variável NOME_LOJA. Todos os dados são pedagógicos e não substituem as informações reais do pet shop.
 
 Intenções implementadas:
 - agendamento: "agendar", "marcar"
@@ -19,6 +20,7 @@ Intenções implementadas:
 - listar: "liste", "quais serviços", "mostre"
 
 Assuntos da loja:
+- nome: "nome da loja", "nome do pet shop"
 - horario: "horário", "abre", "fecha", "domingo"
 - pagamento: "pagamento", "pix", "cartão", "parcela"
 - endereco: "endereço", "onde fica", "estacionamento"
@@ -52,6 +54,7 @@ Exemplos de perguntas que o chatbot consegue responder:
 - O que inclui o exame de sangue?
 - Qual o porte aceito pela hidratação de pelos?
 - Liste os serviços de Saúde
+- Qual o nome da loja?
 - Qual o horário de funcionamento?
 - Vocês aceitam Pix?
 - Onde fica a loja?
